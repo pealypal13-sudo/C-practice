@@ -1,0 +1,17 @@
+#include<stdio.h>                      
+int main()
+{
+  int n,answer ;
+  int a=0;
+  int b=1;
+  
+  scanf("%d",&n);
+  for(int i=1;i<=n;i++)
+  {
+     printf("%d ",a);          // printf must be put before a=b; otherwise 0 wont print
+    answer=a+b;
+    a=b;
+    b=answer;
+   
+  }
+}
