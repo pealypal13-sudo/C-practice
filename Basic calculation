@@ -1,0 +1,26 @@
+#include<stdio.h>            
+#include<math.h>
+int main()
+{
+  int a,b,ans;
+  char s;
+  scanf("%d %c %d = %d",&a,&s,&b,&ans);
+  if (s == '+')           //'-' , '=' , '+' , '*' are used as characters here
+  {if ((a+b)==ans)
+    { printf("Yes");}
+    else
+    {printf("%d",a+b);}
+  }
+  else if(s == '-')
+  { if((a-b)==ans)
+   { printf("Yes");}
+   else
+   {printf("%d",a-b);}
+  }
+  else
+  { if((a*b)==ans)
+    {printf("Yes");}
+   else{ printf("%d",a*b);}
+  }
+  return 0;
+}
