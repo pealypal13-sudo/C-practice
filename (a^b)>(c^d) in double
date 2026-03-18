@@ -1,0 +1,18 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+ double a,b,c,d,A,B;
+  scanf("%lf %lf %lf %lf",&a,&b,&c,&d);
+  A=b*(log(a));                   //"%" does not work on double
+  B=d*(log(c));                   // A = log(a^b)   --> A = b*log(a);
+  if(A>B)
+  {
+    printf("YES");
+  }
+  else
+  {
+    printf("NO");
+  }
+  return 0;
+}
