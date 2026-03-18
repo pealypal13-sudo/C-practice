@@ -1,0 +1,25 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+ int a,b,c,d,A,B,C,D,div;
+ scanf("%d %d %d %d",&a,&b,&c,&d);
+A=a%100;
+B=b%100;
+C=c%100;
+D=d%100;
+div=(A*B*C*D)%100;
+if(div==0)
+{
+  printf("00");
+}
+else if ( div<=9)
+{
+  printf("0%d",div);
+}
+else
+{
+printf("%d",div);
+}
+  return 0;
+}
