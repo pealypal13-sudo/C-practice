@@ -1,0 +1,22 @@
+#include<stdio.h>
+int main()
+{
+  int a,dig1=0,dig2=0;
+  scanf("%d",&a);
+  int arr[a][a];
+
+  for(int i=0;i<a;i++)
+  {
+      for(int j=0;j<a;j++)
+      {
+      scanf("%d",&arr[i][j]);
+      if(i==j) dig1+=arr[i][j];
+      if((i+j)==(a-1)) dig2+=arr[i][j];
+      }
+
+  }
+  int ans = (dig1-dig2);
+  if(ans<0) ans=(-1)*ans;
+  printf("%d",ans);
+  return 0;
+}
