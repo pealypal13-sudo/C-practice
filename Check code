@@ -1,0 +1,23 @@
+#include<stdio.h>
+#include<math.h>
+int main()
+{
+  int a,b,flag=1;
+  scanf("%d%d",&a,&b);
+  char arr[a+b+2];              //must use string here cause if we use array the whole 'code' will be considered 1 digit as it has got no space abd a char '-'; so the data type wont even work
+  scanf("%s",arr);              // One space for '\0'
+  if (arr[a]!='-') flag =0;
+  for(int i=0;i<(a+b+1) && flag ;i++)   
+  {
+     if(i==a)
+     continue;
+
+     else if(!(arr[i]>='0' && arr[i]<='9'))     //If it's not set at not(!), the flag value wont really work properly 
+     {
+         flag = 0;
+     }
+  }
+    if(flag) printf("Yes");
+    else printf("No");
+    return 0;
+}
